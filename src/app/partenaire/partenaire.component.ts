@@ -1,7 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { partenaire } from '../models/models';
 import { UpperCasePipe } from '@angular/common';
-
 @Component({
   selector: 'app-partenaire',
   standalone: true,
@@ -13,7 +12,6 @@ export class PartenaireComponent implements OnInit {
   @Input() partenaire!: partenaire;
   titre!: string;
  appreciation!: number;
- bouton!: string;
  cliquebouton!: boolean;
  partenaire1!: partenaire; 
  partenaire2!: partenaire;
@@ -24,7 +22,6 @@ export class PartenaireComponent implements OnInit {
  partenaire7!: partenaire;
  ngOnInit(): void {
   this.appreciation = 10
-  this.bouton = 'Apprecier'
   this.titre = 'Partenaire'
   this.partenaire1 = new partenaire (
     ' MK Service iMMO',
@@ -62,22 +59,4 @@ export class PartenaireComponent implements OnInit {
    'docta.jpg'
   )
 }
-onacliquer() {
-  if ( this.cliquebouton ) {
-    this.avantclique()
-  } else {
-  this.apreclique()
-  } 
-}
-avantclique() {
-  this.appreciation--
-    this.bouton = 'Apprecier'
-    this.cliquebouton = false
-}
-apreclique() {
-  this.appreciation++
-  this.bouton = "J'apprecie"
-  this.cliquebouton = true
-} 
-
 }
