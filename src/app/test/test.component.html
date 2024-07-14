@@ -1,0 +1,17 @@
+    <div class="item-list">
+        <div *ngFor="let item of items" class=" card item-container" (click)="onItemClicked(item, $event)">
+            <div class="item">
+              {{ item.name }}
+            </div>
+            <div *ngIf="selectedItem === item" class="details">
+              <h2>Détails de l'élément</h2>
+              <p>Nom: {{ selectedItem.name }}</p>
+              <p>Âge: {{ selectedItem.age }}</p>
+              <img class="item-image" [src]="selectedItem.image" alt="Image de {{ selectedItem.name }}" />
+            </div>
+            <div *ngIf="selectedItem !== item" class="message">
+              Cliquer pour afficher les détails
+            </div>
+          </div>
+  </div>  
+  

@@ -4,11 +4,12 @@ import { PartenaireComponent } from './partenaire/partenaire.component';
 import { TeamComponent } from './team/team.component';
 import { partenaire } from './models/models';
 import { ImageDirective } from './image.directive';
+import { TestComponent } from './test/test.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, RouterLink, PartenaireComponent, TeamComponent, ImageDirective],
+  imports: [RouterOutlet, RouterLink, PartenaireComponent, TeamComponent, ImageDirective, TestComponent, ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
