@@ -23,7 +23,7 @@ export class TestComponent implements OnInit {
     { name: 'Mabo', age: 23, image: 'mabo.jpg' },
     { name: 'Mabo', age: 23, image: 'mabo.jpg' },
     { name: 'Mabo', age: 23, image: 'mabo.jpg' },
-    // Ajoute d'autres éléments ici
+   
   ];
 
   selectedItem: any = null;

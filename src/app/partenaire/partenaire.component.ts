@@ -1,62 +1,29 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { partenaire } from '../models/models';
-import { UpperCasePipe } from '@angular/common';
+import { CommonModule, LowerCasePipe, UpperCasePipe } from '@angular/common';
 @Component({
   selector: 'app-partenaire',
   standalone: true,
-  imports: [ UpperCasePipe],
+  imports: [ UpperCasePipe, LowerCasePipe, CommonModule],
   templateUrl: './partenaire.component.html',
   styleUrl: './partenaire.component.scss'
 })
 export class PartenaireComponent implements OnInit {
   @Input() partenaire!: partenaire;
   titre!: string;
- appreciation!: number;
- cliquebouton!: boolean;
- partenaire1!: partenaire; 
- partenaire2!: partenaire;
- partenaire3!: partenaire;
- partenaire4!: partenaire;
- partenaire5!: partenaire;
- partenaire6!: partenaire;
- partenaire7!: partenaire;
+ 
  ngOnInit(): void {
-  this.appreciation = 10
-  this.titre = 'Partenaire'
-  this.partenaire1 = new partenaire (
-    ' MK Service iMMO',
-    'Agence de gestion, location, vente, achat de projet immobilier en Guinée',
-    ' mk service.jpg'
-   )
-  this.partenaire2 = new partenaire (
-   'Group Marewa Immobilier',
-   "Group marewa est une agence immobiliere incontournable dans le dommaine de l'immobilier en Guinee",
-   'marewa.jpg'
-  )
-  this.partenaire3 = new partenaire(
-   'ACCA Immobilier New',
-   'Agence Immobiliére',
-   'aka.jpg'
-  )
-  this.partenaire4 = new partenaire(
-   'Alim Immobilier',
-   ' Acheter et louer en toute securite partout en Guinee Avec ALim immobilier la satisfaction',
-   'alim.jpg'
-  )
-  this.partenaire5 = new partenaire(
-   'Group Bady Sarl',
-   "Chez nous aucun reve n'est trop grand",
-   'bady sarl.jpg'
-  )
-  this.partenaire6 = new partenaire(
-   'Lapyragii',
-   " Lapyragii est une societe multi sectoriel qui aspire a offrir des prestations professionelles",
-   'lapyragui.jpg'
-  )
-  this.partenaire7 = new partenaire(
-   'Docta Immo',
-   "Agence immobiliere",
-   'docta.jpg'
-  )
+  this.titre = 'Nos Partenaire'
 }
-}
+
+ partenairemembre = [
+   {name:'mk service immo', description: 'Agence de gestion, location, vente, achat de projet immobilier en Guinée', image:'mk service.jpg'},
+   {name:'group marewa', description: "Group marewa est une agence immobiliere incontournable dans le dommaine de l'immobilier en Guinée", image:'marewa.jpg'},
+   {name:'aka immobilier new', description:'Agence Immobiliére', image:'aka.jpg'},
+   {name:'alim immobilier', description: ' Acheter et louer en toute securite partout en Guinee Avec ALim immobilier la satisfaction', image:'alim.jpg'},
+   {name:'group bady sarl', description:  "Chez nous aucun reve n'est trop grand", image:'bady sarl.jpg'},
+   {name:'lapyragii', description: " Lapyragii est une societe multi sectoriel qui aspire a offrir des prestations professionelles", image:'lapyragui.jpg'},
+   {name:'docta immo', description: "Agence immobiliere", image:'docta.jpg'},
+ ]
+
+ }

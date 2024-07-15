@@ -13,44 +13,9 @@ import { CommonModule, UpperCasePipe } from '@angular/common';
 export class TeamComponent implements OnInit {
 @Input() membre! : team;
 titre!: string;
-// membre1!: team;
-// membre2!: team; 
-// membre3!: team; 
-// membre4!: team; 
-// membre5!: team; 
-// membre6!: team; 
+
   ngOnInit(): void {
-  //    this.membre1 = new team( 
-  //      'Siradio',
-  //      'PDG',
-  //      'mo-pdg.png'
-  //    )
-  //    this.membre2 = new team( 
-  //      'Ismaila Baldé',
-  //     'Architecte IT',
-  //      'ismaila.jpg'
-  //    )
-  //    this.membre3 = new team( 
-  //      'Kadiata Bah',
-  //      'Directrice Adjointe',
-  //      'kadiata.jpg'
-  //    )
-  //    this.membre4 = new team( 
-  //      'Mabo ',
-  //      'Directeur ',
-  //      'mabo.jpg'
-  //    )
-  //    this.membre5 = new team(
-  //      'Thierno Moussa',
-  //      'Developeur Full stack',
-  //      ''
-  //    )
-  //    this.membre6 = new team( 
-  //      'Mamadou Saidou Baldé',
-  //     'Stagiaire en Developpement Web',
-  //     'saidou.jpg'
-  //  )
-    this.titre = "L'equipe"
+ this.titre = "Notre Equipe"
   }
   
   teamMembers = [
@@ -65,7 +30,7 @@ titre!: string;
 
  
 
- toggleDescription(member: any): void {
+ Description(member: any): void {
   if (this.selectedMember === member) {
     this.selectedMember = null; 
   } else {
